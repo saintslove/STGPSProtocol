@@ -1,0 +1,7 @@
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../muduo/Debug)
+project(STGPSProtocol)
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/../../Include ${CMAKE_CURRENT_SOURCE_DIR}/../../muduo)
+set(SOURCE_FILES STGPSProtocol.cpp Base.h Base.cpp)
+add_library(STGPSProtocol SHARED ${SOURCE_FILES})
+target_link_libraries(STGPSProtocol muduo)
+#set(LIBRARY_OUTPUT_PATH  ${PROJECT_BINARY_DIR}/lib)
